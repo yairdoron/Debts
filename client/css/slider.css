@@ -1,0 +1,48 @@
+﻿.slider {
+  padding: 40px;
+  width: 200px;
+  position: relative;
+}
+.slider .scale-marks {
+  position: absolute;
+  top: 65px;
+  width: 80%;
+  color: white;
+}
+.slider .scale-marks ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.slider .scale-marks li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.slider .scale-marks span {
+  font-size: 1.3em;
+  display: block;
+}
+.slider .scale-marks li::after {
+  content: 'km';
+  font-size: 0.7em;
+}
+.slider .range {
+  position: relative;
+}
+.slider .range .pointer {
+  left: 29%;
+  border-radius: 50%;
+  background-color: #CC9966;
+  width: 16px;
+  height: 16px;
+  border: solid 1px white;
+  position: absolute;
+  z-index: 10;
+}
+.slider .range .line {
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  border: solid 2px black;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="debts">
+
+<head>
+    <meta charset="UTF-8">
+    <title>alert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet" />
+    <script src="scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="js/map.js"></script>
+</head>
+<body>
+    <header>
+        <div class="debtHeader">
+            <a href="index.html" class="left">
+            <img src="img/arrow.png" alt="arrow">
+        </a>
+        </div>
+    </header>
+    <section class="content" ng-controller="firstController">
+        <div class="alertHeader">
+            <hDebt5>(תזכורת)</hDebt5> <br>
+            
+            <h3 class="blue"> כספומט בקירבתך!<br>הוצא לפחות 34 ש"ח</h3>
+        </div>
+      
+         <div class="debtHeader" style="hight:380px; padding: 0px;">
+             <hAlert>  חובות</hAlert>
+        </div>
+        <section class="debt-list">
+            <table class="debt-table">
+                <tr class="debt-row" ng-repeat="debt in model.items">
+                    <td class="details">
+                        <div class="blue">{{debt.name}} <span class="info blue">({{debt.info}})</span></div>
+
+                        <div class="blue">{{debt.date}}</div>
+                    </td>
+                    <td class="amount blue">{{debt.debt}} ש"ח</td>
+                </tr>
+            </table>
+        </section>
+    </section>
+    <div class="row">   
+       <div id="map"></div>
+    </div>
+       
+</body>
+</html>

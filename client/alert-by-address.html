@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="debts">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Addess Alert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet" />
+    <script src="scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="js/map.js"></script>
+</head>
+<body>
+    <header>
+        <div class="debtHeader">
+        <a href="index.html" class="right">
+            <img src="img/x.png" alt="false">
+        </a>
+        <a href="index.html" class="right">
+            <img src="img/v.png" alt="false">
+        </a>
+        <a href="index.html" class="left">
+            <img src="img/arrow.png" alt="arrow">
+        </a>
+        </div>
+    </header>
+    <section class="content" ng-controller="firstController">
+        <h2 class="blue">ת. עפ"י כתובת</h2><br>
+        
+        <div class="row">   
+           <div class= "debtFirstSpase"><label class="debt-label">[כתובת]</label></div><input></input>
+        </div>
+    
+        <div class="row">   
+            <div class= "debtFirstSpase"></div><label class="debt-amount">001</label><span class="debt-currency">  ק"מ</span>
+        </div>
+    
+        <div class="row">
+            <div id="map"></div>
+        </div>
+     </section>
+</body>
+</html>

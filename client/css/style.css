@@ -1,0 +1,147 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    direction:rtl;
+    font-family: 'Alef', sans-serif;
+    font-size: 1.2em;
+}
+
+nav {
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    margin-top: 40px;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav .main-nav {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear-fix::after {
+    content: '';
+    height:0;
+    display: block;
+    clear: both;
+}
+
+.main-nav li {
+    float: right;
+    margin: 0 2%;
+    width: calc(21% - 2px);
+}
+
+.main-nav a:link, .main-nav a:visited {
+    display: block;
+    color: #959595;
+    border: solid 1px #959595;
+    width: 100%;    
+    padding: 50px 0;
+    vertical-align: middle;
+}
+
+nav .main-nav .active {
+    color: green;
+    border: solid 1px green;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0 0 10px;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.debt-list {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: black;
+    margin: 40px 0;
+}
+
+.add-debt {
+    background-color: #d0d0d0;
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 15px 20%;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-family: Alef;
+}
+
+.large-font {
+    font-size: 3em;
+    margin-left:4%;
+}
+
+.debt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.debt-table .debt-row {
+    border-top: solid 1px black;
+}
+
+
+.debt-row td {
+    padding: 10px 0
+}
+
+.debt-row td:first-child {
+    text-align: left;
+    padding-left: 5%;
+    width: 24%
+}
+
+.debt-row td:last-child {
+    padding-left: 10%;
+    width: 24%;
+    text-align:center;
+}
+
+.checkbox {
+    visibility: visible;
+}
+
+.checkbox::before {
+    display: block;
+    background-image: url('../img/checkbox-empty.svg');
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    content: '';
+    position: relative;
+    top: 0px;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.checkbox.checked::before {
+    background-image: url('../img/checkbox-checked.svg');
+}
+.debt-table .info {
+    font-size: 0.8em;
+}
+
+.debt-table .amount {
+    font-weight: bold;
+}
+
+.debt-table .edit-debt {
+    color: black;
+}

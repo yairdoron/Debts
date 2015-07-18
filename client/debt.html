@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="debts">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Debt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='//fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
+        <!--CSS-->
+        <link href="/css/main.css" rel="stylesheet">
+        <link href="/css/slider.css" rel="stylesheet" />
+        <!--/CSS-->
+        <!--SCRIPTS -->
+        <script src="/scripts/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+        <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+        <script src="//rawgit.com/angular-ui/angular-google-maps/2.1.5/dist/angular-google-maps.min.js"></script>
+        <script src="/app/app.js"></script>
+        <!--/SCRIPTS-->
+    </head>
+    
+    <body ng-controller="debtController">
+        <header>
+            <div class="debtHeader">
+                <a href="index.html" class="right">
+                    <img src="img/x.png" alt="false">
+                </a>
+                <a ng-click="saveDebt()" class="right">
+                    <img src="img/V.png" alt="false">
+                </a>
+                <a href="index.html" class="left">
+                    <img src="img/arrow.png" alt="arrow">
+                </a>
+            </div>
+        </header>
+        <section class="content">
+            <h1 class="blue">חוב</h1>
+            <div class="row">
+                <div class="debtFirstSpase">
+                    <label class="debt-label">[שם]</label>
+                </div>
+                <input type="text" ng-model="debt.name">
+            </div>
+            <div class="row">
+                <div class="debtFirstSpase">
+                    <label class="debt-label">[סיבה]</label>
+                </div>
+                <input type="text" ng-model="debt.info">
+            </div>
+            <div class="row">
+                <div class="debtFirstSpase">
+                    <label class="debt-label">[בסך]</label>
+                </div>
+                <label class="debt-amount">
+                    <input type="text" min="0" ng-model="debt.debt">
+                </label>
+                <label class="debt-currency">ש"ח</label>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="debtFirstSpase">
+                    <hDebt>[עפ"י]</hDebt>
+                </div>
+                <hDebt5>בהתקרב לכל כספומט</hDebt5>
+            </div>
+            <div class="row">
+                <div class="debtFirstSpase"></div>
+                <hDebt3>OFF ON</hDebt3>
+            </div>
+            <div class="row">
+                <div class="debtFirstSpase"></div>
+                <input></input>
+            </div>
+            <div class="row">
+                <div class="debtFirstSpase"></div>
+                <hDebt3>001</hDebt3>
+                <hDebt4>ק"מ</hDebt4>
+            </div>
+            <div class="row">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' refresh="shouldUpdateMap()">
+                    <ui-gmap-marker coords='map.center' idKey='currentKey'></ui-gmap-marker>
+                </ui-gmap-google-map>
+            </div>
+        </section>
+    </body>
+
+</html>

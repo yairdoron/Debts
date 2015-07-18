@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="debts">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href='//fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
+        <!--STYLE-->
+        <link href="/css/main.css" rel="stylesheet">
+        <link href="/css/slider.css" rel="stylesheet" />
+        <!--SCRIPTS-->
+        <script src="/scripts/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+        <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+        <script src="//rawgit.com/angular-ui/angular-google-maps/2.1.5/dist/angular-google-maps.min.js"></script>
+        <script src="/app/app.js"></script>
+    </head>
+    
+    <body>
+        <header class="page-header">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li>
+                        <input type="checkbox" class="togglers" id="market" />
+                        <label for="market">שוק</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="togglers" id="buses" />
+                        <label for="buses">אוטובוסים</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="togglers" id="shop" />
+                        <label for="shop">מכולת</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="togglers" id="address" />
+                        <label for="address">כתובת</label>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="content" ng-controller="firstController">
+            <h1 class="blue">חובות</h1>
+            <h3 class="brown">({{debtsSum()}} ש"ח)</h3>
+            <section class="debt-list">
+                <button class="add-debt" ng-click="goToDebtForm()">
+                    <span class="large-font">+</span>הוסף חוב חדש</button>
+                <table class="debt-table">
+                    <tr class="debt-row" ng-repeat="debt in model.items">
+                        <td class="details">
+                            <a ng-click="goToDebt(debt.name)">
+                                <div class="own-to blue">
+                                    {{debt.name}}
+                                    <span class="info">({{debt.info}})</span>
+                                </div>
+                                <div class="debt-date brown">{{debt.date}}</div>
+                            </a>
+                        </td>
+                        <td class="amount blue">{{debt.debt}} ש"ח</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </body>
+
+</html>
